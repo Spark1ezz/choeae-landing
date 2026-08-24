@@ -31,23 +31,29 @@ export default function Hero() {
       {/* Main Content Layout */}
       <div className="relative z-20 container mx-auto px-6 h-full flex flex-col md:flex-row items-center justify-between">
         
-        {/* Left/Center Content (Waitlist + Typography) - shifted lower to fill bottom space */}
-        <div className="w-full md:w-1/2 pt-6 md:pt-12 md:pr-10 z-30">
-          <p className="font-sora text-moon-grey tracking-[0.2em] text-xs uppercase mb-4 flex items-center gap-2">
-            <span className="w-8 h-px bg-choeae-pink" />
-            Welcome to your CHOEAE
-          </p>
+        {/* Left/Center Content (Waitlist + Typography) */}
+        <div className="w-full md:w-1/2 pt-2 md:pt-4 md:pr-10 z-30 flex flex-col justify-between">
+          {/* Top block: Eyebrow + Headline */}
+          <div>
+            <p className="font-sora text-moon-grey tracking-[0.2em] text-xs uppercase mb-3 md:mb-4 flex items-center gap-2">
+              <span className="w-8 h-px bg-choeae-pink" />
+              Welcome to your CHOEAE
+            </p>
+            
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.06] text-pearl">
+              Your favorite <br />
+              <span className="text-holo italic pr-2 leading-tight">is one pull away.</span>
+            </h1>
+          </div>
           
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.06] text-pearl mb-6">
-            Your favorite <br />
-            <span className="text-holo italic pr-2 leading-tight">is one pull away.</span>
-          </h1>
-          
-          <p className="text-moon-grey text-base md:text-lg max-w-lg mb-8 leading-relaxed">
-            Open authentic physical K-pop photocards. Keep what you love, instantly sell the rest, or trade your way to your bias.
-          </p>
-          
-          <WaitlistForm />
+          {/* Bottom block: Description + Waitlist Form */}
+          <div className="mt-8 md:mt-14">
+            <p className="text-moon-grey text-base md:text-lg max-w-lg mb-6 leading-relaxed">
+              Open authentic physical K-pop photocards. Keep what you love, instantly sell the rest, or trade your way to your bias.
+            </p>
+            
+            <WaitlistForm />
+          </div>
         </div>
 
         {/* Right Content (Floating Cards) */}
