@@ -32,9 +32,9 @@ export default function Hero() {
       <div className="relative z-20 container mx-auto px-6 h-full flex flex-col md:flex-row items-center justify-between">
         
         {/* Left/Center Content (Waitlist + Typography) */}
-        <div className="w-full md:w-1/2 pt-2 md:pt-4 md:pr-10 z-30 flex flex-col justify-between">
-          {/* Top block: Eyebrow + Headline */}
-          <div>
+        <div className="w-full md:w-1/2 pt-0 md:pr-10 z-30 flex flex-col justify-between">
+          {/* Top block: Eyebrow + Headline - shifted higher */}
+          <div className="-mt-4 md:-mt-8 lg:-mt-12">
             <p className="font-sora text-moon-grey tracking-[0.2em] text-xs uppercase mb-3 md:mb-4 flex items-center gap-2">
               <span className="w-8 h-px bg-choeae-pink" />
               Welcome to your CHOEAE
@@ -47,7 +47,7 @@ export default function Hero() {
           </div>
           
           {/* Bottom block: Description + Waitlist Form */}
-          <div className="mt-8 md:mt-14">
+          <div className="mt-10 md:mt-16 lg:mt-20">
             <p className="text-moon-grey text-base md:text-lg max-w-lg mb-6 leading-relaxed">
               Open authentic physical K-pop photocards. Keep what you love, instantly sell the rest, or trade your way to your bias.
             </p>
