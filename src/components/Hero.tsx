@@ -37,7 +37,7 @@ export default function Hero() {
             Welcome to your CHOEAE
           </p>
           
-          <h1 className="hero-headline mb-3 md:mb-4 font-bold text-pearl">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.08] text-pearl mb-3 md:mb-4">
             Your favorite <br />
             <span className="text-holo italic pr-2 leading-tight">is one pull away.</span>
           </h1>
