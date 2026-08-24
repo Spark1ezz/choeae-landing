@@ -75,8 +75,8 @@ export default function Hero() {
             </div>
           </div>
           
-          {/* Waitlist Form */}
-          <div className="mt-8 md:mt-12">
+          {/* Waitlist Form - positioned compactly under feature badges */}
+          <div className="mt-5 md:mt-6">
             <WaitlistForm />
           </div>
         </div>

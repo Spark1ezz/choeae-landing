@@ -70,7 +70,7 @@ export default function WaitlistForm() {
   ];
 
   return (
-    <div className="w-full max-w-md mt-6 md:mt-8">
+    <div className="w-full max-w-md mt-0">
       <AnimatePresence mode="wait">
         {step === 1 && (
           <motion.form
