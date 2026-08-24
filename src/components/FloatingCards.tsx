@@ -14,11 +14,11 @@ interface CardProps {
 }
 
 const cards: CardProps[] = [
-  { type: "EXCLUSIVE", value: "$420", top: "10%", left: "5%", delay: 0.2, rotation: -12, imageColor: "from-purple-500/20 to-pink-500/20" },
-  { type: "POB", value: "$42", top: "45%", left: "45%", delay: 0.4, rotation: 8, imageColor: "from-blue-500/20 to-teal-500/20" },
-  { type: "GRAIL", value: "$1,240", top: "25%", left: "80%", delay: 0.6, rotation: 15, imageColor: "from-yellow-500/20 to-orange-500/20" },
-  { type: "LUCKY DRAW", value: "$180", top: "70%", left: "15%", delay: 0.8, rotation: -5, imageColor: "from-rose-500/20 to-red-500/20" },
-  { type: "ALBUM", value: "$8", top: "80%", left: "70%", delay: 1.0, rotation: -20, imageColor: "from-indigo-500/20 to-cyan-500/20" },
+  { type: "EXCLUSIVE", value: "$420", top: "6%", left: "6%", delay: 0.2, rotation: -10, imageColor: "from-purple-500/20 to-pink-500/20" },
+  { type: "POB", value: "$42", top: "34%", left: "46%", delay: 0.4, rotation: 6, imageColor: "from-blue-500/20 to-teal-500/20" },
+  { type: "GRAIL", value: "$1,240", top: "14%", left: "76%", delay: 0.6, rotation: 12, imageColor: "from-yellow-500/20 to-orange-500/20" },
+  { type: "LUCKY DRAW", value: "$180", top: "54%", left: "12%", delay: 0.8, rotation: -6, imageColor: "from-rose-500/20 to-red-500/20" },
+  { type: "ALBUM", value: "$8", top: "60%", left: "68%", delay: 1.0, rotation: -16, imageColor: "from-indigo-500/20 to-cyan-500/20" },
 ];
 
 export default function FloatingCards() {

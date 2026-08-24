@@ -6,13 +6,14 @@ import FloatingCards from "./FloatingCards";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen lg:min-h-[700px] flex items-center pt-20 pb-10 md:pt-24 md:pb-12 overflow-hidden">
-      {/* Background - Night Seoul Horizon */}
+    <section className="relative min-h-screen flex items-center pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden">
+      {/* Background - Rich Midnight Seoul Plum Atmospheric Glow */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-midnight-plum via-seoul-night to-midnight-plum" />
-        {/* Abstract glowing horizon */}
-        <div className="absolute bottom-0 left-0 right-0 h-[40vh] bg-gradient-to-t from-choeae-pink/5 to-transparent" />
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[80vw] h-[20vh] bg-holo-violet/10 blur-[100px] rounded-full" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0e0a17] via-[#161224] to-[#120f1d]" />
+        {/* Glowing ambient horizons */}
+        <div className="absolute top-[20%] left-1/4 w-[65vw] h-[35vh] bg-holo-violet/10 blur-[140px] rounded-full" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85vw] h-[30vh] bg-holo-violet/12 blur-[130px] rounded-full" />
+        <div className="absolute bottom-5 left-10 w-[45vw] h-[25vh] bg-choeae-pink/8 blur-[120px] rounded-full" />
         {/* Subtle Moon */}
         <div className="absolute top-[15%] right-[15%] w-16 h-16 rounded-full bg-pearl/20 blur-[2px] shadow-[0_0_40px_rgba(255,249,247,0.3)]" />
       </div>
@@ -31,18 +32,18 @@ export default function Hero() {
       <div className="relative z-20 container mx-auto px-6 h-full flex flex-col md:flex-row items-center justify-between">
         
         {/* Left/Center Content (Waitlist + Typography) */}
-        <div className="w-full md:w-1/2 pt-2 md:pt-0 md:pr-8 z-30">
-          <p className="font-sora text-moon-grey tracking-[0.2em] text-[11px] md:text-xs uppercase mb-2 md:mb-3 flex items-center gap-2">
-            <span className="w-6 md:w-8 h-px bg-choeae-pink" />
+        <div className="w-full md:w-1/2 pt-4 md:pt-0 md:pr-10 z-30">
+          <p className="font-sora text-moon-grey tracking-[0.2em] text-xs uppercase mb-4 flex items-center gap-2">
+            <span className="w-8 h-px bg-choeae-pink" />
             Welcome to your CHOEAE
           </p>
           
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight leading-[1.08] text-pearl mb-3 md:mb-4">
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.06] text-pearl mb-6">
             Your favorite <br />
             <span className="text-holo italic pr-2 leading-tight">is one pull away.</span>
           </h1>
           
-          <p className="text-moon-grey text-sm md:text-base max-w-md mb-4 md:mb-5 leading-relaxed">
+          <p className="text-moon-grey text-base md:text-lg max-w-lg mb-8 leading-relaxed">
             Open authentic physical K-pop photocards. Keep what you love, instantly sell the rest, or trade your way to your bias.
           </p>
           
@@ -50,7 +51,7 @@ export default function Hero() {
         </div>
 
         {/* Right Content (Floating Cards) */}
-        <div className="w-full md:w-1/2 h-[40vh] md:h-[75vh] relative mt-4 md:mt-0 z-20 pointer-events-none">
+        <div className="w-full md:w-1/2 h-[50vh] md:h-[80vh] relative mt-6 md:mt-0 z-20 pointer-events-none">
           <FloatingCards />
         </div>
       </div>
