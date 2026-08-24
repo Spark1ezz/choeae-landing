@@ -15,8 +15,14 @@ export default function FourPossibilities() {
   const [active, setActive] = useState('pull');
 
   return (
-    <section className="py-32 relative bg-seoul-night text-pearl border-t border-white/5">
-      <div className="container mx-auto px-6">
+    <section className="py-32 relative text-pearl overflow-hidden border-t border-white/5">
+      {/* Background with Ambient Glow */}
+      <div className="absolute inset-0 z-0 pointer-events-none">
+        <div className="absolute inset-0 bg-gradient-to-b from-midnight-plum via-seoul-night to-midnight-plum" />
+        <div className="absolute top-1/2 right-10 w-[50vw] h-[30vh] bg-choeae-pink/5 blur-[140px] rounded-full" />
+      </div>
+
+      <div className="container mx-auto px-6 relative z-10">
         <div className="flex flex-col md:flex-row items-center justify-between gap-16">
           
           <div className="w-full md:w-1/2">
@@ -30,7 +36,7 @@ export default function FourPossibilities() {
                   className={cn(
                     "p-6 rounded-2xl cursor-pointer transition-all duration-300 border",
                     active === p.id 
-                      ? "glass border-white/20 bg-white/5" 
+                      ? "glass border-white/20 bg-white/5 shadow-[0_0_30px_rgba(255,255,255,0.03)]" 
                       : "border-transparent opacity-50 hover:opacity-100"
                   )}
                 >
