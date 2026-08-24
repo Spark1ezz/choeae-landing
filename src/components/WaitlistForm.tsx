@@ -70,7 +70,7 @@ export default function WaitlistForm() {
   ];
 
   return (
-    <div className="w-full max-w-md mt-6 md:mt-8">
+    <div className="w-full max-w-md mt-8 md:mt-12">
       <AnimatePresence mode="wait">
         {step === 1 && (
           <motion.form
@@ -100,9 +100,6 @@ export default function WaitlistForm() {
             </div>
             <p className="text-xs text-moon-grey font-medium px-4">
               Early collectors get first access to drops, community rewards and launch giveaways.
-            </p>
-            <p className="text-[10px] text-moon-grey/50 px-4 mt-1 tracking-wide">
-              CHOEAE 최애 — your favorite, your collection.
             </p>
           </motion.form>
         )}
