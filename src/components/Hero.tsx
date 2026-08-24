@@ -6,7 +6,7 @@ import FloatingCards from "./FloatingCards";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+    <section className="relative min-h-screen lg:min-h-[700px] flex items-center pt-20 pb-10 md:pt-24 md:pb-12 overflow-hidden">
       {/* Background - Night Seoul Horizon */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-midnight-plum via-seoul-night to-midnight-plum" />
@@ -28,21 +28,21 @@ export default function Hero() {
       </div>
 
       {/* Main Content Layout */}
-      <div className="relative z-20 container mx-auto px-6 h-full flex flex-col md:flex-row items-center">
+      <div className="relative z-20 container mx-auto px-6 h-full flex flex-col md:flex-row items-center justify-between">
         
         {/* Left/Center Content (Waitlist + Typography) */}
-        <div className="w-full md:w-1/2 pt-4 md:pt-0 md:pr-10 z-30">
-          <p className="font-sora text-moon-grey tracking-[0.2em] text-xs uppercase mb-4 md:mb-6 flex items-center gap-2">
-            <span className="w-8 h-px bg-choeae-pink" />
+        <div className="w-full md:w-1/2 pt-2 md:pt-0 md:pr-8 z-30">
+          <p className="font-sora text-moon-grey tracking-[0.2em] text-[11px] md:text-xs uppercase mb-2 md:mb-3 flex items-center gap-2">
+            <span className="w-6 md:w-8 h-px bg-choeae-pink" />
             Welcome to your CHOEAE
           </p>
           
-          <h1 className="hero-headline mb-4 md:mb-6 font-bold text-pearl">
+          <h1 className="hero-headline mb-3 md:mb-4 font-bold text-pearl">
             Your favorite <br />
             <span className="text-holo italic pr-2 leading-tight">is one pull away.</span>
           </h1>
           
-          <p className="text-moon-grey text-base md:text-lg max-w-lg mb-6 md:mb-8 leading-relaxed">
+          <p className="text-moon-grey text-sm md:text-base max-w-md mb-4 md:mb-5 leading-relaxed">
             Open authentic physical K-pop photocards. Keep what you love, instantly sell the rest, or trade your way to your bias.
           </p>
           
@@ -50,7 +50,7 @@ export default function Hero() {
         </div>
 
         {/* Right Content (Floating Cards) */}
-        <div className="w-full md:w-1/2 h-[45vh] md:h-screen relative mt-8 md:mt-0 z-20 pointer-events-none">
+        <div className="w-full md:w-1/2 h-[40vh] md:h-[75vh] relative mt-4 md:mt-0 z-20 pointer-events-none">
           <FloatingCards />
         </div>
       </div>
