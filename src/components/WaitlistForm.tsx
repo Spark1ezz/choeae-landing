@@ -102,11 +102,10 @@ export default function WaitlistForm() {
               </div>
             </div>
 
-            {/* Early access notice with micro-badge */}
-            <div className="flex items-center gap-2 px-3 pt-1 text-xs text-moon-grey/90 font-medium">
-              <span className="text-choeae-pink text-sm">♡</span>
-              <span>Early collectors get first access to drops & launch rewards.</span>
-            </div>
+            {/* Early access notice - centered without heart */}
+            <p className="text-center text-xs text-moon-grey/80 font-medium pt-1 px-4">
+              Early collectors get first access to drops &amp; launch rewards.
+            </p>
           </motion.form>
         )}
 
