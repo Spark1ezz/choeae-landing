@@ -32,38 +32,33 @@ export default function Hero() {
       <div className="relative z-20 container mx-auto px-6 h-full flex flex-col md:flex-row items-center justify-between">
         
         {/* Left/Center Content (Waitlist + Typography) */}
-        <div className="w-full md:w-1/2 pt-0 md:pr-10 z-30 flex flex-col justify-between">
-          {/* Top block: Eyebrow + Headline - Redesigned */}
-          <div className="-mt-4 md:-mt-8 lg:-mt-12">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-5 shadow-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-choeae-pink animate-pulse" />
-              <span className="font-sora text-pearl/90 tracking-[0.18em] text-[11px] uppercase font-semibold">
-                CHOEAE 최애
-              </span>
-              <span className="text-white/20 text-xs">•</span>
-              <span className="text-moon-grey/80 tracking-wide text-[11px] font-medium">
-                Next-gen K-pop Collecting
-              </span>
-            </div>
-            
-            <h1 className="text-4xl sm:text-5xl lg:text-[54px] xl:text-[64px] font-bold tracking-[-0.035em] leading-[1.08]">
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pearl via-white to-pearl/90 drop-shadow-sm">
-                Your favorite
-              </span>
-              <span className="block mt-1 sm:mt-2 text-holo font-semibold">
-                is one pull away.
-              </span>
-            </h1>
+        <div className="w-full md:w-1/2 pt-0 md:pr-10 z-30">
+          {/* Unified Hero Header + Value Proposition Unit */}
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-5 shadow-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-choeae-pink animate-pulse" />
+            <span className="font-sora text-pearl/90 tracking-[0.18em] text-[11px] uppercase font-semibold">
+              CHOEAE 최애
+            </span>
+            <span className="text-white/20 text-xs">•</span>
+            <span className="text-moon-grey/80 tracking-wide text-[11px] font-medium">
+              Next-gen K-pop Collecting
+            </span>
           </div>
           
-          {/* Bottom block: Description + Waitlist Form */}
-          <div className="mt-10 md:mt-16 lg:mt-20">
-            <p className="text-moon-grey text-base md:text-lg max-w-lg mb-6 leading-relaxed">
-              Open authentic physical K-pop photocards. Keep what you love, instantly sell the rest, or trade your way to your bias.
-            </p>
-            
-            <WaitlistForm />
-          </div>
+          <h1 className="text-4xl sm:text-5xl lg:text-[54px] xl:text-[64px] font-bold tracking-[-0.035em] leading-[1.08] mb-6">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pearl via-white to-pearl/90 drop-shadow-sm">
+              Your favorite
+            </span>
+            <span className="block mt-1 sm:mt-2 text-holo font-semibold">
+              is one pull away.
+            </span>
+          </h1>
+
+          <p className="text-moon-grey text-base md:text-lg max-w-lg mb-8 leading-relaxed">
+            Open authentic physical K-pop photocards. Keep what you love, instantly sell the rest, or trade your way to your bias.
+          </p>
+          
+          <WaitlistForm />
         </div>
 
         {/* Right Content (Floating Cards) */}
