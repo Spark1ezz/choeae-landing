@@ -5,9 +5,14 @@ import { motion } from "framer-motion";
 export default function ChoeaeLoop() {
   return (
     <section id="how-it-works" className="py-32 relative text-pearl overflow-hidden">
-      {/* Ambient atmospheric glows */}
+      {/* Background - Exact same Seoul Night & Plum gradient as Hero */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[70vw] h-[35vh] bg-holo-violet/8 blur-[130px] rounded-full" />
+        <div className="absolute inset-0 bg-gradient-to-b from-midnight-plum via-seoul-night to-midnight-plum" />
+        
+        {/* Ambient atmospheric glows */}
+        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[70vw] h-[35vh] bg-holo-violet/10 blur-[130px] rounded-full" />
+        <div className="absolute bottom-10 left-10 w-[40vw] h-[25vh] bg-choeae-pink/5 blur-[120px] rounded-full" />
+        <div className="absolute top-10 right-10 w-[35vw] h-[20vh] bg-seoul-blue/5 blur-[100px] rounded-full" />
       </div>
 
       <div className="container mx-auto px-6 relative z-10">

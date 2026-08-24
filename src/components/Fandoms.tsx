@@ -13,7 +13,7 @@ const fandoms = [
 
 export default function Fandoms() {
   return (
-    <section className="py-32 relative">
+    <section className="py-32 relative bg-midnight-plum">
       <div className="container mx-auto px-6">
         <div className="text-center max-w-3xl mx-auto mb-20">
           <h2 className="section-headline mb-6">Start with the <br/>fandom you love.</h2>

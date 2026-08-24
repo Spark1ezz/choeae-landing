@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function ProblemComparison() {
   return (
-    <section className="py-32 relative border-t border-white/5">
+    <section className="py-32 relative bg-seoul-night border-t border-white/5">
       <div className="container mx-auto px-6">
         <h2 className="section-headline text-center mb-24 max-w-4xl mx-auto">
           Collecting shouldn&apos;t be this complicated.

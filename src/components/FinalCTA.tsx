@@ -5,7 +5,7 @@ import WaitlistForm from "./WaitlistForm";
 
 export default function FinalCTA() {
   return (
-    <section id="waitlist" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden pt-20 pb-32">
+    <section id="waitlist" className="relative min-h-[80vh] flex items-center justify-center overflow-hidden bg-midnight-plum pt-20 pb-32">
       
       {/* Cinematic Background */}
       <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">

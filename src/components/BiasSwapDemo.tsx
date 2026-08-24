@@ -7,7 +7,7 @@ export default function BiasSwapDemo() {
   const [swapped, setSwapped] = useState(false);
 
   return (
-    <section className="py-32 relative">
+    <section className="py-32 relative bg-midnight-plum">
       <div className="container mx-auto px-6">
         
         <div className="text-center max-w-3xl mx-auto mb-20">
