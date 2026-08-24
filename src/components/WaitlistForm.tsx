@@ -72,17 +72,17 @@ export default function WaitlistForm() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="flex flex-col gap-6"
+            className="flex flex-col gap-5"
           >
-            <h3 className="font-sora text-3xl font-semibold">You&apos;re in. <span className="text-choeae-pink">♡</span></h3>
+            <h3 className="font-sora text-2xl md:text-3xl font-semibold">You&apos;re in. <span className="text-choeae-pink">♡</span></h3>
             <div>
-              <p className="text-moon-grey mb-4">Who&apos;s your choeae? Choose your favorite group:</p>
-              <div className="flex flex-wrap gap-2">
+              <p className="text-pearl/90 text-sm md:text-base mb-4 font-medium">Who&apos;s your choeae? Choose your favorite group:</p>
+              <div className="flex flex-wrap gap-2.5">
                 {groups.map((g) => (
                   <button
                     key={g}
                     onClick={() => handleGroupSubmit(g)}
-                    className="px-4 py-2 rounded-full border border-white/10 text-sm hover:border-choeae-pink hover:text-choeae-pink transition-colors bg-white/5"
+                    className="px-4 py-2.5 rounded-full border border-white/20 text-sm font-medium text-pearl bg-white/10 hover:bg-choeae-pink/20 hover:border-choeae-pink hover:text-white transition-all shadow-md active:scale-95"
                   >
                     {g}
                   </button>
