@@ -57,7 +57,8 @@ export default function WaitlistForm() {
 
   const handleCopy = () => {
     if (typeof window !== "undefined" && navigator.clipboard) {
-      navigator.clipboard.writeText(window.location.href);
+      const cleanUrl = window.location.origin;
+      navigator.clipboard.writeText(cleanUrl);
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     }
