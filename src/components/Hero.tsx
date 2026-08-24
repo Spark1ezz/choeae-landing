@@ -6,14 +6,14 @@ import FloatingCards from "./FloatingCards";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center pt-24 pb-16 md:pt-28 md:pb-20 overflow-hidden">
+    <section className="relative min-h-screen flex items-center pt-28 pb-12 md:pt-36 md:pb-16 overflow-hidden">
       {/* Background - Rich Midnight Seoul Plum Atmospheric Glow */}
       <div className="absolute inset-0 z-0 pointer-events-none">
         <div className="absolute inset-0 bg-gradient-to-b from-[#0e0a17] via-[#161224] to-[#120f1d]" />
         {/* Glowing ambient horizons */}
         <div className="absolute top-[20%] left-1/4 w-[65vw] h-[35vh] bg-holo-violet/10 blur-[140px] rounded-full" />
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85vw] h-[30vh] bg-holo-violet/12 blur-[130px] rounded-full" />
-        <div className="absolute bottom-5 left-10 w-[45vw] h-[25vh] bg-choeae-pink/8 blur-[120px] rounded-full" />
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[85vw] h-[35vh] bg-holo-violet/12 blur-[130px] rounded-full" />
+        <div className="absolute bottom-5 left-10 w-[45vw] h-[30vh] bg-choeae-pink/8 blur-[120px] rounded-full" />
         {/* Subtle Moon */}
         <div className="absolute top-[15%] right-[15%] w-16 h-16 rounded-full bg-pearl/20 blur-[2px] shadow-[0_0_40px_rgba(255,249,247,0.3)]" />
       </div>
@@ -31,8 +31,8 @@ export default function Hero() {
       {/* Main Content Layout */}
       <div className="relative z-20 container mx-auto px-6 h-full flex flex-col md:flex-row items-center justify-between">
         
-        {/* Left/Center Content (Waitlist + Typography) */}
-        <div className="w-full md:w-1/2 pt-4 md:pt-0 md:pr-10 z-30">
+        {/* Left/Center Content (Waitlist + Typography) - shifted lower to fill bottom space */}
+        <div className="w-full md:w-1/2 pt-6 md:pt-12 md:pr-10 z-30">
           <p className="font-sora text-moon-grey tracking-[0.2em] text-xs uppercase mb-4 flex items-center gap-2">
             <span className="w-8 h-px bg-choeae-pink" />
             Welcome to your CHOEAE
@@ -51,7 +51,7 @@ export default function Hero() {
         </div>
 
         {/* Right Content (Floating Cards) */}
-        <div className="w-full md:w-1/2 h-[50vh] md:h-[80vh] relative mt-6 md:mt-0 z-20 pointer-events-none">
+        <div className="w-full md:w-1/2 h-[55vh] md:h-[85vh] relative mt-6 md:mt-0 z-20 pointer-events-none">
           <FloatingCards />
         </div>
       </div>
