@@ -33,16 +33,26 @@ export default function Hero() {
         
         {/* Left/Center Content (Waitlist + Typography) */}
         <div className="w-full md:w-1/2 pt-0 md:pr-10 z-30 flex flex-col justify-between">
-          {/* Top block: Eyebrow + Headline - shifted higher */}
+          {/* Top block: Eyebrow + Headline - Redesigned */}
           <div className="-mt-4 md:-mt-8 lg:-mt-12">
-            <p className="font-sora text-moon-grey tracking-[0.2em] text-xs uppercase mb-3 md:mb-4 flex items-center gap-2">
-              <span className="w-8 h-px bg-choeae-pink" />
-              Welcome to your CHOEAE
-            </p>
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-5 shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-choeae-pink animate-pulse" />
+              <span className="font-sora text-pearl/90 tracking-[0.18em] text-[11px] uppercase font-semibold">
+                CHOEAE 최애
+              </span>
+              <span className="text-white/20 text-xs">•</span>
+              <span className="text-moon-grey/80 tracking-wide text-[11px] font-medium">
+                Next-gen K-pop Collecting
+              </span>
+            </div>
             
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight leading-[1.06] text-pearl">
-              Your favorite <br />
-              <span className="text-holo italic pr-2 leading-tight">is one pull away.</span>
+            <h1 className="text-4xl sm:text-5xl lg:text-[54px] xl:text-[64px] font-bold tracking-[-0.035em] leading-[1.08]">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pearl via-white to-pearl/90 drop-shadow-sm">
+                Your favorite
+              </span>
+              <span className="block mt-1 sm:mt-2 text-holo font-semibold">
+                is one pull away.
+              </span>
             </h1>
           </div>
           
