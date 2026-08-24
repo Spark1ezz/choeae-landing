@@ -35,8 +35,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${sora.variable} ${manrope.variable} ${notokr.variable}`}>
-      <body className="antialiased bg-midnight-plum text-pearl selection:bg-choeae-pink selection:text-midnight-plum">
+    <html lang="en" className={`${sora.variable} ${manrope.variable} ${notokr.variable}`} suppressHydrationWarning>
+      <body className="antialiased bg-midnight-plum text-pearl selection:bg-choeae-pink selection:text-midnight-plum" suppressHydrationWarning>
         {children}
       </body>
     </html>
