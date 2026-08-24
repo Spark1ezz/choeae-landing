@@ -11,7 +11,8 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
@@ -24,11 +25,11 @@ export default function Navbar() {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300 ease-in-out px-6 md:px-12 flex items-center justify-between",
         scrolled
           ? "bg-[#0B0811]/85 backdrop-blur-xl border-b border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] py-3.5"
-          : "bg-[#0B0811]/40 backdrop-blur-md border-b border-white/5 py-4 md:py-5"
+          : "bg-transparent border-b border-transparent py-5 md:py-6"
       )}
       style={{
-        WebkitBackdropFilter: scrolled ? "blur(20px)" : "blur(12px)",
-        backdropFilter: scrolled ? "blur(20px)" : "blur(12px)",
+        WebkitBackdropFilter: scrolled ? "blur(20px)" : "none",
+        backdropFilter: scrolled ? "blur(20px)" : "none",
       }}
     >
       <a href="#" className="flex flex-col items-start leading-none gap-0.5 group">
