@@ -53,6 +53,16 @@ export default function WaitlistForm() {
     setStep(4);
   };
 
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = () => {
+    if (typeof window !== "undefined" && navigator.clipboard) {
+      navigator.clipboard.writeText(window.location.href);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2500);
+    }
+  };
+
   const groups = [
     "Stray Kids", "BTS", "SEVENTEEN", "NCT", "THE BOYZ",
     "BLACKPINK", "TWICE", "Red Velvet", "Other"
@@ -164,15 +174,14 @@ export default function WaitlistForm() {
             <p className="text-moon-grey">Your profile is ready.</p>
             <button 
               type="button"
-              onClick={() => {
-                if (navigator.clipboard) {
-                  navigator.clipboard.writeText(window.location.href);
-                  alert("Link copied to clipboard!");
-                }
-              }}
-              className="mt-4 px-6 py-3 rounded-full border border-white/20 text-sm hover:bg-white/10 transition-colors flex items-center gap-2"
+              onClick={handleCopy}
+              className={`mt-4 px-6 py-3 rounded-full border text-sm transition-all flex items-center gap-2 ${
+                copied 
+                  ? "border-choeae-pink text-choeae-pink bg-choeae-pink/10" 
+                  : "border-white/20 text-pearl hover:bg-white/10"
+              }`}
             >
-              Invite another collector
+              {copied ? "Link copied! ✦" : "Invite another collector"}
             </button>
           </motion.div>
         )}
