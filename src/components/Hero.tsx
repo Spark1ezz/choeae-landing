@@ -57,7 +57,7 @@ export default function Hero() {
       </div>
       
       {/* Bottom gradient fade for scroll transition */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-midnight-plum to-transparent z-20" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-midnight-plum to-transparent z-20 pointer-events-none" />
     </section>
   );
 }

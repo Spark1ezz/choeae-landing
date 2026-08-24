@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import WaitlistForm from "./WaitlistForm";
 
 export default function FinalCTA() {
   return (
@@ -50,25 +51,9 @@ export default function FinalCTA() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ delay: 0.3 }}
-          className="max-w-md mx-auto"
+          className="flex justify-center"
         >
-          <form className="relative" onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="email"
-              placeholder="your@email.com"
-              required
-              className="w-full bg-white/5 border border-white/20 rounded-full px-6 py-4 text-pearl placeholder:text-moon-grey focus:outline-none focus:border-choeae-pink/50 transition-colors shadow-2xl shadow-black/50"
-            />
-            <button
-              type="submit"
-              className="absolute right-2 top-2 bottom-2 bg-pearl text-midnight-plum px-8 rounded-full font-sora font-bold hover:scale-105 transition-transform flex items-center gap-2"
-            >
-              Join CHOEAE <span className="text-holo-violet text-lg">✦</span>
-            </button>
-          </form>
-          <p className="text-sm text-moon-grey/60 mt-6 font-medium">
-            Join the first collectors building CHOEAE.
-          </p>
+          <WaitlistForm />
         </motion.div>
       </div>
     </section>

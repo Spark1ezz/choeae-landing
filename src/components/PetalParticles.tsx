@@ -47,7 +47,7 @@ export default function PetalParticles() {
       {petals.map((petal) => (
         <motion.div
           key={petal.id}
-          className="absolute rounded-full"
+          className="absolute rounded-full pointer-events-none"
           style={{
             width: petal.size,
             height: petal.size * 0.6,
