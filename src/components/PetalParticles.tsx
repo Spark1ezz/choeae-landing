@@ -40,8 +40,8 @@ export default function PetalParticles() {
         id: i,
         x: Math.random() * 100, // 0 - 100% width
         y: Math.random() * 100, // 0 - 100% height
-        size: typeChoice === "star" ? 10 + Math.random() * 8 : 3 + Math.random() * 5,
-        duration: 4 + Math.random() * 6,
+        size: typeChoice === "star" ? 7 + Math.random() * 6 : 2.5 + Math.random() * 3.5,
+        duration: 5 + Math.random() * 7,
         delay: Math.random() * 4,
         type: typeChoice,
         color: palette.color,
@@ -64,9 +64,9 @@ export default function PetalParticles() {
           }}
           initial={{ opacity: 0.1, scale: 0.6 }}
           animate={{
-            opacity: [0.15, 0.85, 0.15],
-            scale: [0.7, 1.25, 0.7],
-            y: [0, -25, 0],
+            opacity: [0.08, 0.45, 0.08],
+            scale: [0.7, 1.15, 0.7],
+            y: [0, -20, 0],
             rotate: sp.type === "star" ? [0, 45, 0] : [0, 90, 0],
           }}
           transition={{

@@ -18,12 +18,7 @@ export default function Hero() {
         <div className="absolute top-[15%] right-[15%] w-16 h-16 rounded-full bg-pearl/20 blur-[2px] shadow-[0_0_40px_rgba(255,249,247,0.3)]" />
       </div>
 
-      {/* Cherry Blossom Branch Silhouette (Left) */}
-      <div className="absolute -left-[20%] -bottom-[10%] w-[60%] h-[80%] opacity-40 mix-blend-screen z-10 pointer-events-none hidden md:block">
-         <div className="w-full h-full bg-gradient-radial from-choeae-pink/10 to-transparent blur-3xl transform -rotate-45" />
-      </div>
-
-      {/* Petal Particles layer */}
+      {/* Petal/Stardust Particles layer */}
       <div className="absolute inset-0 z-10 pointer-events-none">
         <PetalParticles />
       </div>
@@ -31,33 +26,53 @@ export default function Hero() {
       {/* Main Content Layout */}
       <div className="relative z-20 container mx-auto px-6 h-full flex flex-col md:flex-row items-center justify-between">
         
-        {/* Left/Center Content (Waitlist + Typography) */}
+        {/* Left/Center Content (Waitlist + Typography) - Ultra Premium Redesign */}
         <div className="w-full md:w-1/2 pt-0 md:pr-10 z-30">
-          {/* Unified Hero Header + Value Proposition Unit */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 backdrop-blur-md mb-5 shadow-sm">
-            <span className="w-1.5 h-1.5 rounded-full bg-choeae-pink animate-pulse" />
-            <span className="font-sora text-pearl/90 tracking-[0.18em] text-[11px] uppercase font-semibold">
+          
+          {/* Status Badge */}
+          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-white/[0.08] to-white/[0.02] border border-white/15 backdrop-blur-xl mb-6 shadow-[0_2px_20px_rgba(255,143,184,0.15)]">
+            <span className="flex h-2 w-2 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-choeae-pink opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-choeae-pink" />
+            </span>
+            <span className="font-sora text-pearl tracking-[0.18em] text-[11px] uppercase font-bold">
               CHOEAE 최애
             </span>
-            <span className="text-white/20 text-xs">•</span>
-            <span className="text-moon-grey/80 tracking-wide text-[11px] font-medium">
-              Next-gen K-pop Collecting
+            <span className="w-1 h-1 rounded-full bg-white/30" />
+            <span className="text-holo-violet tracking-wider text-[11px] font-semibold">
+              Physical Vault Protocol
             </span>
           </div>
           
-          <h1 className="text-4xl sm:text-5xl lg:text-[54px] xl:text-[64px] font-bold tracking-[-0.035em] leading-[1.08] mb-6">
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-pearl via-white to-pearl/90 drop-shadow-sm">
+          {/* Main Headline */}
+          <h1 className="text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] font-bold tracking-[-0.04em] leading-[1.05] mb-5">
+            <span className="block text-pearl drop-shadow-[0_2px_15px_rgba(255,249,247,0.15)]">
               Your favorite
             </span>
-            <span className="block mt-1 sm:mt-2 text-holo font-semibold">
+            <span className="block mt-1.5 sm:mt-2 text-holo font-semibold">
               is one pull away.
             </span>
           </h1>
 
-          <p className="text-moon-grey text-base md:text-lg max-w-lg mb-8 leading-relaxed">
+          {/* Description */}
+          <p className="text-moon-grey text-base md:text-lg max-w-lg mb-6 leading-relaxed font-light">
             Open authentic physical K-pop photocards. Keep what you love, instantly sell the rest, or trade your way to your bias.
           </p>
+
+          {/* Micro Feature Badges */}
+          <div className="flex flex-wrap items-center gap-2.5 mb-8">
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-medium text-pearl/90 backdrop-blur-sm shadow-sm">
+              <span className="text-choeae-pink text-xs">✦</span> 100% Authentic Vault
+            </div>
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-medium text-pearl/90 backdrop-blur-sm shadow-sm">
+              <span className="text-holo-violet text-xs">✦</span> Instant Liquidity
+            </div>
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-medium text-pearl/90 backdrop-blur-sm shadow-sm">
+              <span className="text-seoul-blue text-xs">✦</span> Direct Bias Swap
+            </div>
+          </div>
           
+          {/* Waitlist Form */}
           <WaitlistForm />
         </div>
 
