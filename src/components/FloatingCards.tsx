@@ -67,17 +67,22 @@ export default function FloatingCards() {
           <div className={`absolute inset-0 bg-gradient-to-br ${card.imageColor} mix-blend-overlay opacity-80`} />
           <div className="absolute inset-0 bg-black/40" />
           
-          {/* Holographic foil overlay */}
+          {/* Holographic foil overlay - smooth seamless continuous shimmer */}
           <motion.div
-            className="absolute inset-0 opacity-40 mix-blend-color-dodge"
+            className="absolute inset-0 opacity-25 mix-blend-color-dodge pointer-events-none"
             style={{
-              background: "linear-gradient(125deg, transparent 20%, rgba(255, 143, 184, 0.4) 40%, rgba(134, 215, 255, 0.4) 60%, transparent 80%)",
-              backgroundSize: "200% 200%",
+              background: "linear-gradient(125deg, transparent 15%, rgba(255, 143, 184, 0.35) 40%, rgba(185, 161, 255, 0.35) 50%, rgba(134, 215, 255, 0.35) 60%, transparent 85%)",
+              backgroundSize: "250% 250%",
             }}
             animate={{
-              backgroundPosition: [`0% 0%`, `100% 100%`],
+              backgroundPosition: ["0% 0%", "100% 100%"],
             }}
-            transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+            transition={{ 
+              duration: 7 + i, 
+              repeat: Infinity, 
+              repeatType: "reverse", 
+              ease: "easeInOut" 
+            }}
           />
 
           <div className="absolute inset-0 p-3 flex flex-col justify-between z-10">
@@ -107,12 +112,12 @@ export default function FloatingCards() {
           transform: "translate(-50%, -50%)",
         }}
         animate={{
-          y: [-10, 10, -10],
+          y: [-8, 8, -8],
           rotateX: mousePosition.y * 1.5,
           rotateY: mousePosition.x * 1.5,
         }}
         transition={{
-          y: { duration: 8, repeat: Infinity, ease: "easeInOut" },
+          y: { duration: 7, repeat: Infinity, ease: "easeInOut" },
           rotateX: { type: "spring", stiffness: 40 },
           rotateY: { type: "spring", stiffness: 40 },
         }}
@@ -122,17 +127,22 @@ export default function FloatingCards() {
            <div className="w-32 h-48 bg-white/5 blur-xl rounded-full" />
         </div>
         
-        {/* Holographic foil overlay */}
+        {/* Holographic foil overlay - smooth seamless ping-pong */}
         <motion.div
-            className="absolute inset-0 opacity-50 mix-blend-color-dodge pointer-events-none"
+            className="absolute inset-0 opacity-30 mix-blend-color-dodge pointer-events-none"
             style={{
-              background: "linear-gradient(125deg, transparent 20%, rgba(255, 143, 184, 0.6) 40%, rgba(185, 161, 255, 0.6) 50%, rgba(134, 215, 255, 0.6) 60%, transparent 80%)",
-              backgroundSize: "300% 300%",
+              background: "linear-gradient(125deg, transparent 15%, rgba(255, 143, 184, 0.4) 40%, rgba(185, 161, 255, 0.4) 50%, rgba(134, 215, 255, 0.4) 60%, transparent 85%)",
+              backgroundSize: "250% 250%",
             }}
             animate={{
-              backgroundPosition: [`0% 0%`, `100% 100%`],
+              backgroundPosition: ["0% 0%", "100% 100%"],
             }}
-            transition={{ duration: 4, repeat: Infinity, ease: "linear" }}
+            transition={{ 
+              duration: 8, 
+              repeat: Infinity, 
+              repeatType: "reverse", 
+              ease: "easeInOut" 
+            }}
         />
 
         <div className="absolute inset-0 p-4 flex flex-col justify-between z-10">

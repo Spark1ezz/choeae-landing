@@ -75,15 +75,15 @@ export default function BiasSwapDemo() {
                     className="absolute inset-0 glass-card border border-holo-violet/50 shadow-[0_0_40px_rgba(185,161,255,0.3)] flex flex-col justify-end p-4"
                   >
                     <div className="absolute inset-0 bg-gradient-to-tr from-holo-violet/20 to-choeae-pink/20" />
-                    {/* Foil effect */}
+                    {/* Foil effect - smooth seamless reverse */}
                     <motion.div
-                      className="absolute inset-0 opacity-50 mix-blend-color-dodge"
+                      className="absolute inset-0 opacity-35 mix-blend-color-dodge pointer-events-none"
                       style={{
-                        background: "linear-gradient(125deg, transparent 20%, rgba(255, 143, 184, 0.4) 40%, rgba(134, 215, 255, 0.4) 60%, transparent 80%)",
-                        backgroundSize: "200% 200%",
+                        background: "linear-gradient(125deg, transparent 15%, rgba(255, 143, 184, 0.4) 40%, rgba(134, 215, 255, 0.4) 60%, transparent 85%)",
+                        backgroundSize: "250% 250%",
                       }}
-                      animate={{ backgroundPosition: [`0% 0%`, `100% 100%`] }}
-                      transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                      animate={{ backgroundPosition: ["0% 0%", "100% 100%"] }}
+                      transition={{ duration: 7, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" }}
                     />
                     
                     <div className="relative z-10 bg-black/60 backdrop-blur-md rounded-lg p-3 border border-white/20 w-full text-center">
