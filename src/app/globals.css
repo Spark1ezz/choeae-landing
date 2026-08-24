@@ -1,26 +1,118 @@
 @import "tailwindcss";
 
+@theme {
+  --color-midnight-plum: #0B0811;
+  --color-seoul-night: #12101B;
+  --color-choeae-pink: #FF8FB8;
+  --color-blossom: #FFD0DE;
+  --color-holo-violet: #B9A1FF;
+  --color-seoul-blue: #86D7FF;
+  --color-pearl: #FFF9F7;
+  --color-moon-grey: #A6A1AF;
+  --color-champagne: #FFDDA8;
+
+  --font-sora: var(--font-sora), sans-serif;
+  --font-manrope: var(--font-manrope), sans-serif;
+  --font-notokr: var(--font-noto-kr), sans-serif;
+
+  --color-background: var(--color-midnight-plum);
+  --color-foreground: var(--color-pearl);
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #0B0811;
+  --foreground: #FFF9F7;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-manrope), sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-sora), sans-serif;
+}
+
+.font-kr {
+  font-family: var(--font-noto-kr), sans-serif;
+}
+
+/* Typography styles */
+.hero-headline {
+  font-size: clamp(44px, 8vw, 100px);
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.section-headline {
+  font-size: clamp(32px, 5vw, 64px);
+  line-height: 1.1;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+}
+
+/* Holographic text */
+.text-holo {
+  background: linear-gradient(90deg, #FF8FB8, #B9A1FF, #86D7FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  animation: holoFlow 8s ease infinite;
+}
+
+@keyframes holoFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(18, 16, 27, 0.4);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Button */
+.btn-primary {
+  background: var(--color-pearl);
+  color: var(--color-midnight-plum);
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  font-family: var(--font-sora), sans-serif;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+/* Utilities for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
