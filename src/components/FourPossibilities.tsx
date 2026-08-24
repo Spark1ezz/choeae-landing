@@ -18,7 +18,6 @@ export default function FourPossibilities() {
     <section className="py-32 relative text-pearl overflow-hidden border-t border-white/5">
       {/* Background with Ambient Glow */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-midnight-plum via-seoul-night to-midnight-plum" />
         <div className="absolute top-1/2 right-10 w-[50vw] h-[30vh] bg-choeae-pink/5 blur-[140px] rounded-full" />
       </div>
 

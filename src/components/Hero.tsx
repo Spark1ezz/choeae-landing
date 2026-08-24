@@ -7,12 +7,10 @@ import FloatingCards from "./FloatingCards";
 export default function Hero() {
   return (
     <section className="relative min-h-screen lg:min-h-[700px] flex items-center pt-20 pb-10 md:pt-24 md:pb-12 overflow-hidden">
-      {/* Background - Night Seoul Horizon */}
+      {/* Background - Horizon Light & Atmosphere */}
       <div className="absolute inset-0 z-0 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-to-b from-midnight-plum via-seoul-night to-midnight-plum" />
         {/* Abstract glowing horizon */}
-        <div className="absolute bottom-0 left-0 right-0 h-[40vh] bg-gradient-to-t from-choeae-pink/5 to-transparent" />
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 w-[80vw] h-[20vh] bg-holo-violet/10 blur-[100px] rounded-full" />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[70vw] h-[30vh] bg-holo-violet/10 blur-[130px] rounded-full" />
         {/* Subtle Moon */}
         <div className="absolute top-[15%] right-[15%] w-16 h-16 rounded-full bg-pearl/20 blur-[2px] shadow-[0_0_40px_rgba(255,249,247,0.3)]" />
       </div>

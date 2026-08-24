@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function DigitalBinder() {
   return (
-    <section className="py-32 relative bg-seoul-night border-t border-white/5 overflow-hidden">
+    <section className="py-32 relative border-t border-white/5 overflow-hidden">
       <div className="container mx-auto px-6 relative z-10">
         
         <div className="text-center max-w-3xl mx-auto mb-16">

@@ -13,7 +13,7 @@ const pulls = [
 
 export default function Community() {
   return (
-    <section id="community" className="py-32 relative bg-seoul-night border-t border-white/5 overflow-hidden">
+    <section id="community" className="py-32 relative border-t border-white/5 overflow-hidden">
       <div className="container mx-auto px-6 mb-32">
         <div className="flex flex-col md:flex-row gap-16 max-w-6xl mx-auto">
           
@@ -68,7 +68,7 @@ export default function Community() {
       </div>
 
       {/* Live Pulls Horizontal Ticker */}
-      <div id="drops" className="relative border-y border-white/5 py-16 bg-midnight-plum">
+      <div id="drops" className="relative border-y border-white/5 py-16 bg-white/[0.01]">
         <div className="absolute inset-0 bg-gradient-to-r from-midnight-plum via-transparent to-midnight-plum z-10 pointer-events-none" />
         
         <div className="text-center mb-10">

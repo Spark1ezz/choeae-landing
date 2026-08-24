@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export default function RealCards() {
   return (
-    <section className="py-32 relative bg-midnight-plum">
+    <section className="py-32 relative">
       <div className="container mx-auto px-6">
         
         <div className="text-center max-w-3xl mx-auto mb-20">
