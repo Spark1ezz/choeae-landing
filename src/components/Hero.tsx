@@ -27,53 +27,58 @@ export default function Hero() {
       <div className="relative z-20 container mx-auto px-6 h-full flex flex-col md:flex-row items-center justify-between">
         
         {/* Left/Center Content (Waitlist + Typography) - Ultra Premium Redesign */}
-        <div className="w-full md:w-1/2 pt-0 md:pr-10 z-30">
+        <div className="w-full md:w-1/2 pt-0 md:pr-10 z-30 flex flex-col justify-between">
           
-          {/* Status Badge */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-white/[0.08] to-white/[0.02] border border-white/15 backdrop-blur-xl mb-6 shadow-[0_2px_20px_rgba(255,143,184,0.15)]">
-            <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-choeae-pink opacity-75" />
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-choeae-pink" />
-            </span>
-            <span className="font-sora text-pearl tracking-[0.18em] text-[11px] uppercase font-bold">
-              CHOEAE 최애
-            </span>
-            <span className="w-1 h-1 rounded-full bg-white/30" />
-            <span className="text-holo-violet tracking-wider text-[11px] font-semibold">
-              Physical Vault Protocol
-            </span>
-          </div>
-          
-          {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] font-bold tracking-[-0.04em] leading-[1.05] mb-5">
-            <span className="block text-pearl drop-shadow-[0_2px_15px_rgba(255,249,247,0.15)]">
-              Your favorite
-            </span>
-            <span className="block mt-1.5 sm:mt-2 text-holo font-semibold">
-              is one pull away.
-            </span>
-          </h1>
-
-          {/* Description */}
-          <p className="text-moon-grey text-base md:text-lg max-w-lg mb-6 leading-relaxed font-light">
-            Open authentic physical K-pop photocards. Keep what you love, instantly sell the rest, or trade your way to your bias.
-          </p>
-
-          {/* Micro Feature Badges */}
-          <div className="flex flex-wrap items-center gap-2.5 mb-8">
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-medium text-pearl/90 backdrop-blur-sm shadow-sm">
-              <span className="text-choeae-pink text-xs">✦</span> 100% Authentic Vault
+          {/* Top Cluster: Badge + Headline + Description + Feature Pills - Shifted Higher */}
+          <div className="-mt-4 md:-mt-8 lg:-mt-12">
+            {/* Status Badge */}
+            <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-gradient-to-r from-white/[0.08] to-white/[0.02] border border-white/15 backdrop-blur-xl mb-5 shadow-[0_2px_20px_rgba(255,143,184,0.15)]">
+              <span className="flex h-2 w-2 relative">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-choeae-pink opacity-75" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-choeae-pink" />
+              </span>
+              <span className="font-sora text-pearl tracking-[0.18em] text-[11px] uppercase font-bold">
+                CHOEAE 최애
+              </span>
+              <span className="w-1 h-1 rounded-full bg-white/30" />
+              <span className="text-holo-violet tracking-wider text-[11px] font-semibold">
+                Physical Vault Protocol
+              </span>
             </div>
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-medium text-pearl/90 backdrop-blur-sm shadow-sm">
-              <span className="text-holo-violet text-xs">✦</span> Instant Liquidity
-            </div>
-            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-medium text-pearl/90 backdrop-blur-sm shadow-sm">
-              <span className="text-seoul-blue text-xs">✦</span> Direct Bias Swap
+            
+            {/* Main Headline */}
+            <h1 className="text-4xl sm:text-5xl lg:text-[56px] xl:text-[66px] font-bold tracking-[-0.04em] leading-[1.05] mb-4">
+              <span className="block text-pearl drop-shadow-[0_2px_15px_rgba(255,249,247,0.15)]">
+                Your favorite
+              </span>
+              <span className="block mt-1.5 sm:mt-2 text-holo font-semibold">
+                is one pull away.
+              </span>
+            </h1>
+
+            {/* Description */}
+            <p className="text-moon-grey text-base md:text-lg max-w-lg mb-5 leading-relaxed font-light">
+              Open authentic physical K-pop photocards. Keep what you love, instantly sell the rest, or trade your way to your bias.
+            </p>
+
+            {/* Micro Feature Badges */}
+            <div className="flex flex-wrap items-center gap-2.5">
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-medium text-pearl/90 backdrop-blur-sm shadow-sm">
+                <span className="text-choeae-pink text-xs">✦</span> 100% Authentic Vault
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-medium text-pearl/90 backdrop-blur-sm shadow-sm">
+                <span className="text-holo-violet text-xs">✦</span> Instant Liquidity
+              </div>
+              <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-[11px] font-medium text-pearl/90 backdrop-blur-sm shadow-sm">
+                <span className="text-seoul-blue text-xs">✦</span> Direct Bias Swap
+              </div>
             </div>
           </div>
           
           {/* Waitlist Form */}
-          <WaitlistForm />
+          <div className="mt-8 md:mt-12">
+            <WaitlistForm />
+          </div>
         </div>
 
         {/* Right Content (Floating Cards) */}
