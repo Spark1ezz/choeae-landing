@@ -40,11 +40,17 @@ export default function FloatingCards() {
   if (!isClient) return null;
 
   return (
-    <div className="absolute inset-0 pointer-events-none perspective-[1000px]">
+    <div className="absolute inset-0 perspective-[1000px] pointer-events-auto">
       {cards.map((card, i) => (
         <motion.div
           key={i}
-          className="absolute w-40 h-56 md:w-48 md:h-64 rounded-xl border border-white/20 glass-card overflow-hidden shadow-2xl"
+          drag
+          dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
+          dragElastic={0.18}
+          dragTransition={{ bounceStiffness: 500, bounceDamping: 25 }}
+          whileDrag={{ scale: 1.05, zIndex: 40, cursor: "grabbing" }}
+          whileHover={{ scale: 1.02, cursor: "grab", zIndex: 20 }}
+          className="absolute w-40 h-56 md:w-48 md:h-64 rounded-xl border border-white/20 glass-card overflow-hidden shadow-2xl cursor-grab active:cursor-grabbing select-none"
           style={{
             top: card.top,
             left: card.left,
@@ -64,8 +70,8 @@ export default function FloatingCards() {
           }}
         >
           {/* Fictional Abstract Art Image */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${card.imageColor} mix-blend-overlay opacity-80`} />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className={`absolute inset-0 bg-gradient-to-br ${card.imageColor} mix-blend-overlay opacity-80 pointer-events-none`} />
+          <div className="absolute inset-0 bg-black/40 pointer-events-none" />
           
           {/* Holographic foil overlay - smooth seamless continuous shimmer */}
           <motion.div
@@ -85,7 +91,7 @@ export default function FloatingCards() {
             }}
           />
 
-          <div className="absolute inset-0 p-3 flex flex-col justify-between z-10">
+          <div className="absolute inset-0 p-3 flex flex-col justify-between z-10 pointer-events-none">
             <div className="flex justify-between items-start">
               <span className="text-[10px] font-sora font-bold tracking-widest text-white/80 uppercase px-2 py-1 bg-black/40 rounded backdrop-blur-md">
                 {card.type}
@@ -105,7 +111,13 @@ export default function FloatingCards() {
 
       {/* Center Demo Card with specific overlay */}
       <motion.div
-        className="absolute w-56 h-80 rounded-xl border border-white/30 glass-card overflow-hidden shadow-2xl z-20 hidden md:block"
+        drag
+        dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
+        dragElastic={0.18}
+        dragTransition={{ bounceStiffness: 500, bounceDamping: 25 }}
+        whileDrag={{ scale: 1.04, zIndex: 50, cursor: "grabbing" }}
+        whileHover={{ scale: 1.02, cursor: "grab", zIndex: 30 }}
+        className="absolute w-56 h-80 rounded-xl border border-white/30 glass-card overflow-hidden shadow-2xl z-20 hidden md:block cursor-grab active:cursor-grabbing select-none"
         style={{
           top: "50%",
           left: "50%",
@@ -122,8 +134,8 @@ export default function FloatingCards() {
           rotateY: { type: "spring", stiffness: 40 },
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-tr from-seoul-night to-choeae-pink/20" />
-        <div className="absolute inset-0 flex items-center justify-center">
+        <div className="absolute inset-0 bg-gradient-to-tr from-seoul-night to-choeae-pink/20 pointer-events-none" />
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
            <div className="w-32 h-48 bg-white/5 blur-xl rounded-full" />
         </div>
         
@@ -145,7 +157,7 @@ export default function FloatingCards() {
             }}
         />
 
-        <div className="absolute inset-0 p-4 flex flex-col justify-between z-10">
+        <div className="absolute inset-0 p-4 flex flex-col justify-between z-10 pointer-events-none">
           <div className="flex justify-between items-start">
             <span className="text-[10px] font-sora font-bold tracking-widest text-white uppercase px-2 py-1 bg-black/60 rounded backdrop-blur-md border border-white/10">
               EXCLUSIVE

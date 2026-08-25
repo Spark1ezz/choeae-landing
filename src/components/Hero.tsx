@@ -82,7 +82,7 @@ export default function Hero() {
         </div>
 
         {/* Right Content (Floating Cards) */}
-        <div className="w-full md:w-1/2 h-[55vh] md:h-[85vh] relative mt-6 md:mt-0 z-20 pointer-events-none">
+        <div className="w-full md:w-1/2 h-[55vh] md:h-[85vh] relative mt-6 md:mt-0 z-20 pointer-events-auto">
           <FloatingCards />
         </div>
       </div>
