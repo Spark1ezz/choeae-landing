@@ -28,7 +28,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-6 text-center text-[10px] text-moon-grey/30 font-mono select-none">
-          1.1
+          1.1.2
         </div>
       </div>
     </footer>

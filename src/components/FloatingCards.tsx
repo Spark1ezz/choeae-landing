@@ -45,10 +45,11 @@ export default function FloatingCards() {
         <motion.div
           key={i}
           drag
-          dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
-          dragElastic={0.18}
-          dragTransition={{ bounceStiffness: 500, bounceDamping: 25 }}
-          whileDrag={{ scale: 1.05, zIndex: 40, cursor: "grabbing" }}
+          dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
+          dragElastic={0.3}
+          dragTransition={{ bounceStiffness: 400, bounceDamping: 12 }}
+          whileTap={{ scale: 0.95, cursor: "grabbing" }}
+          whileDrag={{ scale: 1.08, rotate: -2, zIndex: 40, cursor: "grabbing" }}
           whileHover={{ scale: 1.02, cursor: "grab", zIndex: 20 }}
           className="absolute w-40 h-56 md:w-48 md:h-64 rounded-xl border border-white/20 glass-card overflow-hidden shadow-2xl cursor-grab active:cursor-grabbing select-none"
           style={{
@@ -112,10 +113,11 @@ export default function FloatingCards() {
       {/* Center Demo Card with specific overlay */}
       <motion.div
         drag
-        dragConstraints={{ left: -50, right: 50, top: -50, bottom: 50 }}
-        dragElastic={0.18}
-        dragTransition={{ bounceStiffness: 500, bounceDamping: 25 }}
-        whileDrag={{ scale: 1.04, zIndex: 50, cursor: "grabbing" }}
+        dragConstraints={{ left: -100, right: 100, top: -100, bottom: 100 }}
+        dragElastic={0.3}
+        dragTransition={{ bounceStiffness: 400, bounceDamping: 12 }}
+        whileTap={{ scale: 0.95, cursor: "grabbing" }}
+        whileDrag={{ scale: 1.08, rotate: -2, zIndex: 50, cursor: "grabbing" }}
         whileHover={{ scale: 1.02, cursor: "grab", zIndex: 30 }}
         className="absolute w-56 h-80 rounded-xl border border-white/30 glass-card overflow-hidden shadow-2xl z-20 hidden md:block cursor-grab active:cursor-grabbing select-none"
         style={{
