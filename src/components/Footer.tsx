@@ -26,6 +26,10 @@ export default function Footer() {
             CHOEAE is an independent collectibles platform and is not affiliated with or endorsed by any artist, entertainment agency, record label or group referenced on the platform.
           </p>
         </div>
+
+        <div className="mt-6 text-center text-[10px] text-moon-grey/30 font-mono select-none">
+          1.1
+        </div>
       </div>
     </footer>
   );
