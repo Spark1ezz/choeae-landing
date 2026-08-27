@@ -62,11 +62,10 @@ export default function FourPossibilities() {
                     animate={{ scale: 1, opacity: 1, y: 0, rotateY: 10, rotateX: 5 }}
                     exit={{ scale: 0.8, opacity: 0, y: -50 }}
                     transition={{ type: "spring", stiffness: 100 }}
-                    className="w-64 h-96 rounded-2xl glass-card border-2 border-holo-violet/50 relative overflow-hidden shadow-[0_0_50px_rgba(185,161,255,0.2)] flex items-center justify-center bg-cover bg-center"
-                    style={{ backgroundImage: `url(/bts_4.jpg)` }}
+                    className="w-64 h-96 rounded-2xl glass-card border-2 border-holo-violet/50 relative overflow-hidden shadow-[0_0_50px_rgba(185,161,255,0.2)] flex items-center justify-center"
                   >
-                    <div className="absolute inset-0 bg-black/60" />
-                    <div className="font-sora font-bold text-2xl tracking-widest text-white/80 relative z-10">
+                    <div className="absolute inset-0 bg-gradient-to-br from-holo-violet/20 to-seoul-blue/20" />
+                    <div className="font-sora font-bold text-2xl tracking-widest text-white/50 relative z-10">
                       PACK
                     </div>
                   </motion.div>
