@@ -111,7 +111,7 @@ export default function FourPossibilities() {
                       animate={{ x: -60, opacity: 1, rotateY: 10, zIndex: 10 }}
                       exit={{ x: -100, opacity: 0 }}
                       className="absolute w-48 h-72 rounded-xl glass-card border border-white/20 bg-cover bg-center"
-                      style={{ backgroundImage: `url(/bts_0.png)` }}
+                      style={{ backgroundImage: `url(/photo-11.jpg)` }}
                     >
                       <div className="absolute inset-0 bg-black/60" />
                     </motion.div>

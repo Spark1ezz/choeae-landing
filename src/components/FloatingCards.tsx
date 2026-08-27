@@ -15,7 +15,7 @@ interface CardProps {
 }
 
 const cards: CardProps[] = [
-  { type: "EXCLUSIVE", value: "$420", top: "6%", left: "6%", delay: 0.2, rotation: -10, image: "/bts_0.png", imageColor: "from-purple-500/40 to-pink-500/40" },
+  { type: "EXCLUSIVE", value: "$420", top: "6%", left: "6%", delay: 0.2, rotation: -10, image: "/photo-11.jpg", imageColor: "from-purple-500/40 to-pink-500/40" },
   { type: "POB", value: "$42", top: "34%", left: "46%", delay: 0.4, rotation: 6, image: "/bts_1.jpg", imageColor: "from-blue-500/40 to-teal-500/40" },
   { type: "GRAIL", value: "$1,240", top: "14%", left: "76%", delay: 0.6, rotation: 12, image: "/bts_2.png", imageColor: "from-yellow-500/40 to-orange-500/40" },
   { type: "LUCKY DRAW", value: "$180", top: "54%", left: "12%", delay: 0.8, rotation: -6, image: "/bts_3.jpg", imageColor: "from-rose-500/40 to-red-500/40" },
