@@ -10,15 +10,15 @@ interface CardProps {
   left: string;
   delay: number;
   rotation: number;
-  imageColor: string;
+  image: string;
 }
 
 const cards: CardProps[] = [
-  { type: "EXCLUSIVE", value: "$420", top: "6%", left: "6%", delay: 0.2, rotation: -10, imageColor: "from-purple-500/20 to-pink-500/20" },
-  { type: "POB", value: "$42", top: "34%", left: "46%", delay: 0.4, rotation: 6, imageColor: "from-blue-500/20 to-teal-500/20" },
-  { type: "GRAIL", value: "$1,240", top: "14%", left: "76%", delay: 0.6, rotation: 12, imageColor: "from-yellow-500/20 to-orange-500/20" },
-  { type: "LUCKY DRAW", value: "$180", top: "54%", left: "12%", delay: 0.8, rotation: -6, imageColor: "from-rose-500/20 to-red-500/20" },
-  { type: "ALBUM", value: "$8", top: "60%", left: "68%", delay: 1.0, rotation: -16, imageColor: "from-indigo-500/20 to-cyan-500/20" },
+  { type: "EXCLUSIVE", value: "$420", top: "6%", left: "6%", delay: 0.2, rotation: -10, image: "/bts_0.png" },
+  { type: "POB", value: "$42", top: "34%", left: "46%", delay: 0.4, rotation: 6, image: "/bts_1.jpg" },
+  { type: "GRAIL", value: "$1,240", top: "14%", left: "76%", delay: 0.6, rotation: 12, image: "/bts_2.png" },
+  { type: "LUCKY DRAW", value: "$180", top: "54%", left: "12%", delay: 0.8, rotation: -6, image: "/bts_3.jpg" },
+  { type: "ALBUM", value: "$8", top: "60%", left: "68%", delay: 1.0, rotation: -16, image: "/bts_4.jpg" },
 ];
 
 export default function FloatingCards() {
@@ -70,9 +70,9 @@ export default function FloatingCards() {
             rotateY: { type: "spring", stiffness: 50, damping: 20 },
           }}
         >
-          {/* Fictional Abstract Art Image */}
-          <div className={`absolute inset-0 bg-gradient-to-br ${card.imageColor} mix-blend-overlay opacity-80 pointer-events-none`} />
-          <div className="absolute inset-0 bg-black/40 pointer-events-none" />
+          {/* Card Image */}
+          <div className="absolute inset-0 bg-cover bg-center pointer-events-none" style={{ backgroundImage: `url(${card.image})` }} />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
           
           {/* Holographic foil overlay - smooth seamless continuous shimmer */}
           <motion.div
@@ -136,10 +136,8 @@ export default function FloatingCards() {
           rotateY: { type: "spring", stiffness: 40 },
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-tr from-seoul-night to-choeae-pink/20 pointer-events-none" />
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-           <div className="w-32 h-48 bg-white/5 blur-xl rounded-full" />
-        </div>
+        <div className="absolute inset-0 bg-cover bg-center pointer-events-none" style={{ backgroundImage: `url(/bts_3.jpg)` }} />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent pointer-events-none" />
         
         {/* Holographic foil overlay - smooth seamless ping-pong */}
         <motion.div

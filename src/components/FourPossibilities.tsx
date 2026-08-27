@@ -62,10 +62,11 @@ export default function FourPossibilities() {
                     animate={{ scale: 1, opacity: 1, y: 0, rotateY: 10, rotateX: 5 }}
                     exit={{ scale: 0.8, opacity: 0, y: -50 }}
                     transition={{ type: "spring", stiffness: 100 }}
-                    className="w-64 h-96 rounded-2xl glass-card border-2 border-holo-violet/50 relative overflow-hidden shadow-[0_0_50px_rgba(185,161,255,0.2)] flex items-center justify-center"
+                    className="w-64 h-96 rounded-2xl glass-card border-2 border-holo-violet/50 relative overflow-hidden shadow-[0_0_50px_rgba(185,161,255,0.2)] flex items-center justify-center bg-cover bg-center"
+                    style={{ backgroundImage: `url(/bts_4.jpg)` }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-holo-violet/20 to-seoul-blue/20" />
-                    <div className="font-sora font-bold text-2xl tracking-widest text-white/50 relative z-10">
+                    <div className="absolute inset-0 bg-black/60" />
+                    <div className="font-sora font-bold text-2xl tracking-widest text-white/80 relative z-10">
                       PACK
                     </div>
                   </motion.div>
@@ -78,9 +79,10 @@ export default function FourPossibilities() {
                     animate={{ scale: 1, opacity: 1, x: 0, rotateY: -10, rotateX: 0 }}
                     exit={{ scale: 0.8, opacity: 0, x: 50 }}
                     transition={{ type: "spring", stiffness: 100 }}
-                    className="w-64 h-96 rounded-2xl glass-card border border-white/20 relative overflow-hidden flex items-center justify-center"
+                    className="w-64 h-96 rounded-2xl glass-card border border-white/20 relative overflow-hidden flex items-center justify-center bg-cover bg-center"
+                    style={{ backgroundImage: `url(/bts_1.jpg)` }}
                   >
-                     <div className="absolute inset-0 bg-gradient-to-tr from-choeae-pink/20 to-transparent" />
+                     <div className="absolute inset-0 bg-black/30" />
                      <div className="w-16 h-16 rounded-full border-2 border-white/40 flex items-center justify-center backdrop-blur-md relative z-10">
                        <span className="text-white text-2xl">♡</span>
                      </div>
@@ -94,9 +96,10 @@ export default function FourPossibilities() {
                     animate={{ scale: 1, opacity: 1, y: 0, rotateY: 0, rotateX: 10 }}
                     exit={{ scale: 0.8, opacity: 0, y: 50 }}
                     transition={{ type: "spring", stiffness: 100 }}
-                    className="w-64 h-96 rounded-2xl glass-card border border-champagne/40 relative overflow-hidden flex flex-col items-center justify-center gap-4"
+                    className="w-64 h-96 rounded-2xl glass-card border border-champagne/40 relative overflow-hidden flex flex-col items-center justify-center gap-4 bg-cover bg-center"
+                    style={{ backgroundImage: `url(/bts_2.png)` }}
                   >
-                     <div className="absolute inset-0 bg-gradient-to-b from-champagne/10 to-transparent" />
+                     <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
                      <span className="font-sora text-4xl font-bold text-champagne relative z-10">$180</span>
                      <span className="text-xs uppercase tracking-widest text-white/50 relative z-10">Offer Accepted</span>
                   </motion.div>
@@ -108,15 +111,19 @@ export default function FourPossibilities() {
                       initial={{ x: -100, opacity: 0, rotateY: -20 }}
                       animate={{ x: -60, opacity: 1, rotateY: 10, zIndex: 10 }}
                       exit={{ x: -100, opacity: 0 }}
-                      className="absolute w-48 h-72 rounded-xl glass-card border border-white/20 bg-black/50"
-                    />
+                      className="absolute w-48 h-72 rounded-xl glass-card border border-white/20 bg-cover bg-center"
+                      style={{ backgroundImage: `url(/bts_0.png)` }}
+                    >
+                      <div className="absolute inset-0 bg-black/60" />
+                    </motion.div>
                     <motion.div
                       initial={{ x: 100, opacity: 0, rotateY: 20 }}
                       animate={{ x: 60, opacity: 1, rotateY: -10, zIndex: 20 }}
                       exit={{ x: 100, opacity: 0 }}
-                      className="absolute w-48 h-72 rounded-xl glass-card border-2 border-choeae-pink/50 bg-black/50 shadow-[0_0_30px_rgba(255,143,184,0.2)]"
+                      className="absolute w-48 h-72 rounded-xl glass-card border-2 border-choeae-pink/50 shadow-[0_0_30px_rgba(255,143,184,0.2)] bg-cover bg-center"
+                      style={{ backgroundImage: `url(/bts_3.jpg)` }}
                     >
-                      <div className="absolute inset-0 bg-gradient-to-tr from-choeae-pink/10 to-transparent" />
+                      <div className="absolute inset-0 bg-black/20" />
                     </motion.div>
                     <motion.div 
                       initial={{ scale: 0 }}
