@@ -41,15 +41,17 @@ export default function ChoeaeLoop() {
             </motion.div>
 
             {/* Step 2 */}
+            {/* Step 2 */}
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: 0.2 }}
-              className="w-32 h-44 rounded-xl bg-gradient-to-b from-white/10 to-transparent border border-white/20 flex flex-col items-center justify-center gap-2 glass-card shadow-[0_0_40px_rgba(255,255,255,0.05)]"
+              className="w-32 h-44 rounded-xl border border-white/20 shadow-[0_0_40px_rgba(255,255,255,0.1)] bg-cover bg-center relative overflow-hidden flex items-end justify-center p-4 glass-card"
+              style={{ backgroundImage: 'url(/bts_1.jpg)' }}
             >
-              <div className="w-16 h-20 bg-white/5 rounded-lg border border-white/10" />
-              <span className="font-sora text-sm font-semibold text-pearl">YOUR CARD</span>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
+              <span className="font-sora text-xs font-semibold text-pearl relative z-10 text-center uppercase tracking-widest">Your Card</span>
             </motion.div>
 
             {/* Branches */}
@@ -61,9 +63,20 @@ export default function ChoeaeLoop() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ delay: 0.3 + (i * 0.1) }}
-                  className="glass p-6 rounded-2xl border border-white/10 hover:border-white/25 transition-all shadow-lg hover:shadow-[0_0_25px_rgba(185,161,255,0.1)] bg-white/5"
+                  className="glass p-6 rounded-2xl border border-white/10 hover:border-white/25 transition-all shadow-lg hover:shadow-[0_0_25px_rgba(185,161,255,0.1)] bg-white/5 flex flex-col items-center justify-center gap-3"
                 >
-                  <span className="font-sora font-bold tracking-widest text-lg text-pearl mb-2 block">{action}</span>
+                  <div className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center mb-1 text-white/70">
+                    {action === 'KEEP' && (
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                    )}
+                    {action === 'SELL' && (
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="12" x2="12" y1="2" y2="22"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                    )}
+                    {action === 'SWAP' && (
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="m3 16 4 4 4-4"/><path d="M7 20V4"/><path d="m21 8-4-4-4 4"/><path d="M17 4v16"/></svg>
+                    )}
+                  </div>
+                  <span className="font-sora font-bold tracking-widest text-lg text-pearl block">{action}</span>
                   <p className="text-sm text-moon-grey">
                     {action === 'KEEP' && 'Add to your secure vault.'}
                     {action === 'SELL' && 'Instant liquidity.'}
