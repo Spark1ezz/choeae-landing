@@ -67,14 +67,11 @@ export default function DigitalBinder() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.05 }}
-                  className="aspect-[2.5/3.5] rounded-xl glass-card border border-white/10 relative overflow-hidden group cursor-pointer"
+                  className="aspect-[2.5/3.5] rounded-xl glass-card border border-white/10 relative overflow-hidden group cursor-pointer bg-cover bg-center"
+                  style={{ backgroundImage: `url(/card-${(i % 6) + 1}.jpg)` }}
                 >
-                  {/* Abstract card visual */}
-                  <div className={`absolute inset-0 bg-gradient-to-br opacity-50 ${
-                    i % 3 === 0 ? 'from-purple-500/20 to-pink-500/20' :
-                    i % 3 === 1 ? 'from-blue-500/20 to-cyan-500/20' :
-                    'from-rose-500/20 to-orange-500/20'
-                  }`} />
+                  {/* Overlay for depth */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
                   
                   {i === 2 && (
                     <div className="absolute inset-0 border-2 border-holo-violet/50 rounded-xl pointer-events-none" />

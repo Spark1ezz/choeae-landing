@@ -48,7 +48,7 @@ export default function ChoeaeLoop() {
               viewport={{ once: true, margin: "-100px" }}
               transition={{ delay: 0.2 }}
               className="w-32 h-44 rounded-xl border border-white/20 shadow-[0_0_40px_rgba(255,255,255,0.1)] bg-cover bg-center relative overflow-hidden flex items-end justify-center p-4 glass-card"
-              style={{ backgroundImage: 'url(/bts_1.jpg)' }}
+              style={{ backgroundImage: 'url(/card-4.jpg)' }}
             >
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
               <span className="font-sora text-xs font-semibold text-pearl relative z-10 text-center uppercase tracking-widest">Your Card</span>

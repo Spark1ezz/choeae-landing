@@ -23,8 +23,8 @@ export default function BiasSwapDemo() {
           {/* You Pulled */}
           <div className="flex flex-col items-center gap-6 w-full md:w-1/3">
             <h3 className="font-sora text-moon-grey tracking-widest text-sm font-bold">YOU PULLED</h3>
-            <div className="w-56 h-80 rounded-2xl glass-card border border-white/20 relative overflow-hidden flex flex-col justify-end p-4 shadow-xl">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20" />
+            <div className="w-56 h-80 rounded-2xl glass-card border border-white/20 relative overflow-hidden flex flex-col justify-end p-4 shadow-xl bg-cover bg-center" style={{ backgroundImage: 'url(/card-6.jpg)' }}>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
               <div className="relative z-10 bg-black/50 backdrop-blur-md rounded-lg p-3 border border-white/10 w-full text-center">
                  <p className="font-sora font-bold text-pearl mb-1">Lee Know</p>
                  <p className="text-xs text-moon-grey">Estimated value <span className="text-white">$38</span></p>
@@ -72,9 +72,10 @@ export default function BiasSwapDemo() {
                     animate={{ opacity: 1, rotateY: 0, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.8 }}
                     transition={{ type: "spring", stiffness: 60, damping: 15 }}
-                    className="absolute inset-0 glass-card border border-holo-violet/50 shadow-[0_0_40px_rgba(185,161,255,0.3)] flex flex-col justify-end p-4"
+                    className="absolute inset-0 glass-card border border-holo-violet/50 shadow-[0_0_40px_rgba(185,161,255,0.3)] flex flex-col justify-end p-4 bg-cover bg-center"
+                    style={{ backgroundImage: 'url(/card-5.jpg)' }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-tr from-holo-violet/20 to-choeae-pink/20" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent" />
                     {/* Foil effect - smooth seamless reverse */}
                     <motion.div
                       className="absolute inset-0 opacity-35 mix-blend-color-dodge pointer-events-none"
